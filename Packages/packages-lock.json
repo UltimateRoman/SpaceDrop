@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.dapperlabs.flowsdk": {
+      "version": "https://github.com/onflow/UnityFlowSDK.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
+      "hash": "d01a4b14a98383c18b4d57e87624cb8dba6d0946"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.9",
       "depth": 0,
@@ -158,7 +167,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
