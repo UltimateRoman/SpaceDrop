@@ -1,5 +1,5 @@
-import SpaceDropNFT from 0xf3fcd2c1a78f5eee
-import SampleToken from 0xf3fcd2c1a78f5eee
+import SpaceDropNFT from 0xf8d6e0586b0a20c7
+import SampleToken from 0xf8d6e0586b0a20c7
 
 // This transaction initialises a new account by creating an empty
 // NFT collection and an empty Token Vault, and creating the 

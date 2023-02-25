@@ -10311,6 +10311,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066385421}
   m_CullTransparentMesh: 0
+--- !u!1 &1067188653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067188655}
+  - component: {fileID: 1067188654}
+  m_Layer: 0
+  m_Name: Flow Interface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1067188654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067188653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb7c8b28cdd7ac41bd7b0fe042de050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FLOW_ACCOUNT:
+    _name: 
+    infoKeys: []
+    infoValues: []
+    _gatewayName: 
+  GetTokensScript: {fileID: 2811297602134710623, guid: ecfa21c0ea5003b45a8a84970405e091, type: 3}
+  GetNFTsScript: {fileID: 2811297602134710623, guid: 8ab03ab4b5bac3b429bb3b7fde2b76cc, type: 3}
+  ScriptsResult: {fileID: 0}
+  loginTxn: {fileID: 2811297602134710623, guid: 2b43f1c9272e9fb4f8a5abef9eed2259, type: 3}
+  mintTokenTxn: {fileID: 2811297602134710623, guid: c22934dd3a2fe764cb9aed23f7ebf73e, type: 3}
+  mintNFTTxn: {fileID: 2811297602134710623, guid: 2d77d32d527e7994389254b772adf162, type: 3}
+  TxResultId: {fileID: 0}
+  TxResultScript: {fileID: 0}
+  TxResultRefBlockId: {fileID: 0}
+  TxResultGasLimit: {fileID: 0}
+  TxResultArgs: {fileID: 0}
+  TxResultAuthorizers: {fileID: 0}
+  TxResultPayloadSigs: {fileID: 0}
+  TxResultEnvelopeSigs: {fileID: 0}
+  TxResultPayer: {fileID: 0}
+  TxResultProposer: {fileID: 0}
+  TxResultStatus: {fileID: 0}
+  TxResultStatusCode: {fileID: 0}
+  TxResultError: {fileID: 0}
+  TxResultEvents: {fileID: 0}
+--- !u!4 &1067188655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067188653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1068475313
 GameObject:
   m_ObjectHideFlags: 0
