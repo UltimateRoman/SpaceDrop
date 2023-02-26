@@ -20612,7 +20612,7 @@ MonoBehaviour:
   continuePrice: 20
   rocketController: {fileID: 117038704}
   menu: {fileID: 1425658960}
-  priceText: {fileID: 1266296158}
+  mintAmountText: {fileID: 1266296158}
   notEnough: {fileID: 79114474}
   levelLoader: {fileID: 325578448}
   crashed: 0

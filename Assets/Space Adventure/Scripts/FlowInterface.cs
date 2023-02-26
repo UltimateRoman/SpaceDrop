@@ -42,6 +42,8 @@ namespace StarDrop {
         public GameObject TxResultError;
         public GameObject TxResultEvents;
 
+        private string _flowAddress;
+
         private void Awake() {
             if (_instance == null) {
                 _instance = this;
@@ -83,6 +85,8 @@ namespace StarDrop {
 
         private IEnumerator OnAuthSuccess(string flowAddress, System.Action onSuccessCallback,
             System.Action onFailureCallback) {
+            _instance._flowAddress = flowAddress;
+
             // get flow account
             FLOW_ACCOUNT = FlowControl.Data.Accounts.FirstOrDefault(x => x.AccountConfig["Address"] == flowAddress);
 
@@ -170,16 +174,16 @@ namespace StarDrop {
             CadenceArray responseVal = (CadenceArray)response.Value;
         }
 
-        public static IEnumerator MintTokens(string flowAddress, int amount, System.Action onSuccessCallback,
+        public static IEnumerator MintTokens(int amount, System.Action onSuccessCallback,
             System.Action onFailureCallback) {
-            // get flow account
-            _instance.FLOW_ACCOUNT =
-                FlowControl.Data.Accounts.FirstOrDefault(x => x.AccountConfig["Address"] == flowAddress);
+            // // get flow account
+            // _instance.FLOW_ACCOUNT =
+            //     FlowControl.Data.Accounts.FirstOrDefault(x => x.AccountConfig["Address"] == flowAddress);
 
             // execute log in transaction on chain
             Task<FlowTransactionResult> task = _instance.FLOW_ACCOUNT.SubmitAndWaitUntilExecuted(
                 _instance.mintTokenTxn.text,
-                new CadenceAddress(flowAddress),
+                new CadenceAddress(_instance._flowAddress),
                 new CadenceNumber(CadenceNumberType.UFix64, amount.ToString())
             );
 

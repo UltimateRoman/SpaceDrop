@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using StarDrop;
+using UnityEngine;
 using TMPro;
 using UnityEngine.Serialization;
 
@@ -39,6 +40,8 @@ public class GameOver : MonoBehaviour {
         int mintAmount = Wallet.GetGameCoinIncrement();
 
         // TODO: Mint mintAmount to player crypto wallet.
+        StartCoroutine(FlowInterface.MintTokens(mintAmount, () => { Debug.Log("Minted " + mintAmount + " tokens."); },
+            () => { Debug.Log("Failed to mint tokens."); }));
 
         Wallet.SaveGameCoinIncrement();
     }
