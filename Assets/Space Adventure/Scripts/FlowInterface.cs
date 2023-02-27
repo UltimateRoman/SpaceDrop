@@ -184,7 +184,7 @@ namespace StarDrop {
             Task<FlowTransactionResult> task = _instance.FLOW_ACCOUNT.SubmitAndWaitUntilExecuted(
                 _instance.mintTokenTxn.text,
                 new CadenceAddress(_instance._flowAddress),
-                new CadenceNumber(CadenceNumberType.UFix64, amount.ToString())
+                new CadenceNumber(CadenceNumberType.UFix64, amount.ToString("F1"))
             );
 
             while (!task.IsCompleted) {
