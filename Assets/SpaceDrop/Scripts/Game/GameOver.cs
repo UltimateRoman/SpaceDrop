@@ -32,7 +32,7 @@ public class GameOver : MonoBehaviour {
         anim.Play("Game-Over-In");
         // Disable game menu gameobject with all buttons.
         menu.SetActive(false);
-        Wallet.DisplayAmount();
+        Wallet.DisplayTotalAmount();
         mintAmountText.text = Wallet.GetGameCoinIncrement().ToString();
     }
 

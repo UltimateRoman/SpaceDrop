@@ -11,7 +11,7 @@ public class MainMenuManager : MonoBehaviour {
 
     private void Start() {
         Wallet.SetWalletObject(wallet);
-        Wallet.DisplayAmount();
+        Wallet.DisplayTotalAmount();
 
         if (FlowInterface.IsLoggedIn) {
             menu.SetActive(true);

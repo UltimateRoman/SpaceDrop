@@ -7,6 +7,7 @@ using SpaceDrop;
 public class Wallet : MonoBehaviour {
     private static Wallet _instance;
 
+    [SerializeField] private Garage garage;
 
     private TextMeshProUGUI walletText;
     private int amount = 0;
@@ -24,7 +25,7 @@ public class Wallet : MonoBehaviour {
     // Set player amount to custom value.
     public static void SetAmount(int amountToSet) {
         _instance.amount = amountToSet;
-        DisplayAmount();
+        DisplayTotalAmount();
     }
 
     public static void SetGameAmount(int amountToSet) {
@@ -45,7 +46,7 @@ public class Wallet : MonoBehaviour {
         _instance.amount += _instance.gameCoinIncrement;
         PlayerPrefs.SetInt("WalletAmount", _instance.amount);
         _instance.gameCoinIncrement = 0;
-        DisplayAmount();
+        DisplayTotalAmount();
     }
 
     private void Awake() {
@@ -64,13 +65,14 @@ public class Wallet : MonoBehaviour {
 
     private async void GetTokenBalance() {
         amount = await FlowInterface.ExecuteGetTokens();
-        DisplayAmount();
+        PlayerPrefs.SetInt("WalletAmount", amount);
+        DisplayTotalAmount();
     }
 
 
     // Display player amount to the screen.
-    public static void DisplayAmount() {
-        _instance.walletText.text = _instance.amount.ToString();
+    public static void DisplayTotalAmount() {
+        _instance.walletText.text = (_instance.amount - _instance.garage.GetMoneySpent()).ToString();
     }
 
     // Display amount earned in current game

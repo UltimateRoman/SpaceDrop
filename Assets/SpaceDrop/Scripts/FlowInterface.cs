@@ -192,10 +192,6 @@ namespace SpaceDrop {
 
         public static IEnumerator MintTokens(int amount, System.Action onSuccessCallback,
             System.Action onFailureCallback) {
-            // // get flow account
-            // _instance.FLOW_ACCOUNT =
-            //     FlowControl.Data.Accounts.FirstOrDefault(x => x.AccountConfig["Address"] == flowAddress);
-
             // execute log in transaction on chain
             Task<FlowTransactionResult> task = _instance.FLOW_ACCOUNT.SubmitAndWaitUntilExecuted(
                 _instance.mintTokenTxn.text,
@@ -218,16 +214,12 @@ namespace SpaceDrop {
             onSuccessCallback();
         }
 
-        public static IEnumerator MintNFT(string flowAddress, System.Action onSuccessCallback,
+        public static IEnumerator MintNFT(System.Action onSuccessCallback,
             System.Action onFailureCallback) {
-            // get flow account
-            _instance.FLOW_ACCOUNT =
-                FlowControl.Data.Accounts.FirstOrDefault(x => x.AccountConfig["Address"] == flowAddress);
-
             // execute log in transaction on chain
             Task<FlowTransactionResult> task = _instance.FLOW_ACCOUNT.SubmitAndWaitUntilExecuted(
                 _instance.mintNFTTxn.text,
-                new CadenceAddress(flowAddress)
+                new CadenceAddress(_instance._flowAddress)
             );
 
             while (!task.IsCompleted) {
@@ -241,7 +233,7 @@ namespace SpaceDrop {
                 yield break;
             }
 
-            // login successful!
+            // mint successful!
             onSuccessCallback();
         }
     }
