@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FlowControlData
   m_EditorClassIdentifier: 
   _emulatorSettings:
-    emulatorDataDirectory: C:/Users/fazil/repos/my_repos/unity/SpaceDrop/Assets/SpaceDrop/Scripts/Cadence
+    emulatorDataDirectory: D:/Hackathons/Devfolio online/Flow Hackathon/SpaceDrop/Assets/SpaceDrop/Scripts/Cadence
     flowExecutablePathOverride: 
     runEmulatorInPlayMode: 1
     persistData: 1

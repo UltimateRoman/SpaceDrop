@@ -25,3 +25,4 @@ transaction {
         let ReceiverRef = acct.link<&SampleToken.Vault{SampleToken.Receiver, SampleToken.Balance}>(SampleToken.VaultPublicPath, target: SampleToken.VaultStoragePath)
     }
 }
+ 
