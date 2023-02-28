@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Space Adventure/Scenes/Main Menu.unity
+    path: Assets/SpaceDrop/Scenes/Main Menu.unity
     guid: d6016cbb779e99e48bf384386441f88e
   - enabled: 1
-    path: Assets/Space Adventure/Scenes/Game.unity
+    path: Assets/SpaceDrop/Scenes/Game.unity
     guid: 1f84376ce564cf74ab0863c8368808a8
   m_configObjects: {}
