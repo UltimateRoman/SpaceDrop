@@ -1,5 +1,10 @@
 # SpaceDrop
-2D Mobile game on Flow Blockchain
+
+Mobile based gamified airdrop campaigns on Flow Blockchain
+
+<p align="center">
+ <img src="logo.png" />
+</p>
 
 ## Setup
 - Open Unity Hub. Select “Install” tab and press “Add Modules” button. Then add the following modules
